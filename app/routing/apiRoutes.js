@@ -1,7 +1,10 @@
-function postRequest(answer) {
-    app.post("/survey", function (req, res) {
+function postRequest(app,path) {
+    app.post("/api/survey", function (req, res) {
         var surveyAnswer = req.body;
-        answer.push(surveyAnswer)
-        res.sendFile(__dirname, "result.html")
+        // answer.push(surveyAnswer)
+        res.json(surveyAnswer)
+        
     })
 }
+
+module.exports = postRequest

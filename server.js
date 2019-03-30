@@ -9,10 +9,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("app/public"))
 
+
 var getRequest = require("./app/routing/htmlRoutes.js")
+getRequest(app, path)
+
+var postRequest = require("./app/routing/apiRoutes.js")
+postRequest(app, path)
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 
-getRequest(app, path)

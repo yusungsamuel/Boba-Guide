@@ -1,12 +1,7 @@
-$("#submit").on("click", function(event){
-    event.preventDefault();
-    var answers = {
-        milk: $("#q1").val(),
-        tea: $("#q2").val(),
-        cheese: $("#q3").val(),
-        sweet: $("#q4").val(),
-        fruit: $("#q5").val(),
-        topping: $("#q6").val()
-    };
-    
-})
+var sum = data.milk + data.tea + data.cheese + data.sweet + data.topping + data.fruit
+
+if (sum === ""){
+    var newP = $("<p>").text("We found you a glass of water.")
+    var newImg = $("<img>").attr("src", "https://cdn.images.express.co.uk/img/dynamic/11/590x/Water-600992.jpg")
+    $("#modal").append(newP, newImg)
+}
