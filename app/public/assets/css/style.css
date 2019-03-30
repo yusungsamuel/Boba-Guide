@@ -1,13 +1,17 @@
 body {
     background-image: url("https://images.pexels.com/photos/165228/pexels-photo-165228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
-
+    height: 100vh;
     background-repeat: no-repeat 
 }
 
 .text {
     font-family: 'Alegreya', serif;
 
+}
+
+.survey-box {
+    background-color:  rgba(255, 255, 255, 0.5)
 }
 
 .banner {
