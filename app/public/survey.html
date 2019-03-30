@@ -32,7 +32,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container survey-box py-2">
         <h1 class="text">Survey</h1>
         <form>
@@ -40,12 +40,12 @@
                 <div class="form-group">
                     <h4 class="text">Question 1</h4>
                     <label class="text">Milk?</label>
-                    <select class="form-control" placeholder="option">
-                        <option class="text">1 Lactose intolerance</option>
-                        <option class="text">2</option>
-                        <option class="text">3</option>
-                        <option class="text">4</option>
-                        <option class="text">5 Milk &lt3</option>
+                    <select class="form-control" id="q1">
+                        <option class="text" value="1"> 1 Lactose intolerance</option>
+                        <option class="text" value="2">2</option>
+                        <option class="text" value="3">3</option>
+                        <option class="text" value="4">4</option>
+                        <option class="text" value="5">5 Milk &lt3</option>
                     </select>
                 </div>
             </div>
@@ -54,12 +54,12 @@
                 <div class="form-group">
                     <h4 class="text">Question 2</h4>
                     <label class="text">Tea?</label>
-                    <select class="form-control">
-                        <option class="text">1 I don't like tea.</option>
-                        <option class="text">2</option>
-                        <option class="text">3</option>
-                        <option class="text">4</option>
-                        <option class="text">5 Tea &lt3</option>
+                    <select class="form-control" id="q2">
+                        <option class="text" value="1"> 1 I don't like tea.</option>
+                        <option class="text" value="2">2</option>
+                        <option class="text" value="3">3</option>
+                        <option class="text" value="4">4</option>
+                        <option class="text" value="5">5 Tea &lt3</option>
                     </select>
                 </div>
             </div>
@@ -68,12 +68,12 @@
                 <div class="form-group">
                     <h4 class="text">Question 3</h4>
                     <label class="text">Cheese In Your Tea?</label>
-                    <select class="form-control">
-                        <option class="text">1 Ew, Cheese in tea.</option>
-                        <option class="text">2</option>
-                        <option class="text">3</option>
-                        <option class="text">4</option>
-                        <option class="text">5 I love cheese in my tea</option>
+                    <select class="form-control" id="q3">
+                        <option class="text" value="1"> 1 Ew, Cheese in tea.</option>
+                        <option class="text" value="2">2</option>
+                        <option class="text" value="3">3</option>
+                        <option class="text" value="4">4</option>
+                        <option class="text" value="5">5 I love cheese in my tea</option>
                     </select>
                 </div>
             </div>
@@ -82,12 +82,12 @@
                 <div class="form-group">
                     <h4 class="text">Question 4</h4>
                     <label class="text">Sweetness?</label>
-                    <select class="form-control">
-                        <option class="text">1 not sweet</option>
-                        <option class="text">2</option>
-                        <option class="text">3</option>
-                        <option class="text">4</option>
-                        <option class="text">5 Sugar, yes please</option>
+                    <select class="form-control" id="q4">
+                        <option class="text" value="1"> 1 not sweet</option>
+                        <option class="text" value="2">2</option>
+                        <option class="text" value="3">3</option>
+                        <option class="text" value="4">4</option>
+                        <option class="text" value="5">5 Sugar, yes please</option>
                     </select>
                 </div>
             </div>
@@ -96,12 +96,12 @@
                 <div class="form-group">
                     <h4 class="text">Question 5</h4>
                     <label class="text">Fruitiness?</label>
-                    <select class="form-control">
-                        <option class="text">1 I don't like fruit</option>
-                        <option class="text">2</option>
-                        <option class="text">3</option>
-                        <option class="text">4</option>
-                        <option class="text">5 I love fruit in my drink</option>
+                    <select class="form-control" id="q5">
+                        <option class="text" value="1"> 1 I don't like fruit</option>
+                        <option class="text" value="2">2</option>
+                        <option class="text" value="3">3</option>
+                        <option class="text" value="4">4</option>
+                        <option class="text" value="5">5 I love fruit in my drink</option>
                     </select>
                 </div>
             </div>
@@ -110,20 +110,23 @@
                 <div class="form-group">
                     <h4 class="text">Question 6</h4>
                     <label class="text">Topping Texture</label>
-                    <select class="form-control">
-                        <option class="text">1 Melt in your mouth</option>
-                        <option class="text">2</option>
-                        <option class="text">3</option>
-                        <option class="text">4</option>
-                        <option class="text">5 Very Chewy</option>
+                    <select class="form-control" id="q6">
+                        <option class="text" value="1"> 1 Melt in your mouth</option>
+                        <option class="text" value="2">2</option>
+                        <option class="text" value="3">3</option>
+                        <option class="text" value="4">4</option>
+                        <option class="text" value="5">5 Very Chewy</option>
                     </select>
                 </div>
             </div>
-
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2" id="submit">Submit</button>
+            </div>
         </form>
     </div>
 
     <!-- Optional JavaScript -->
+    <script src="../data/boba.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
