@@ -157,24 +157,34 @@
         $("#submit").on("click", function (event) {
             event.preventDefault();
             var answers = {
-                milk: $("#q1").val(),
-                tea: $("#q2").val(),
-                cheese: $("#q3").val(),
-                sweet: $("#q4").val(),
-                fruit: $("#q5").val(),
-                topping: $("#q6").val()
+                milk: parseInt($("#q1").val()),
+                tea: parseInt($("#q2").val()),
+                cheese: parseInt($("#q3").val()),
+                sweet: parseInt($("#q4").val()),
+                fruit: parseInt($("#q5").val()),
+                topping: parseInt($("#q6").val())
             };
+
             console.log(answers)
 
-
             $.post("/api/survey", answers).then(function (data) {
-                var sum = parseInt(data.milk) + parseInt(data.tea) + parseInt(data.cheese) + parseInt(data.sweet) + parseInt(data.topping) + parseInt(data.fruit)
-                console.log(sum)
-                if (sum === "111111") {
-                    var newP = $("<p>").text("We found you a glass of water.")
-                    var newImg = $("<img>").attr("src", "https://cdn.images.express.co.uk/img/dynamic/11/590x/Water-600992.jpg")
-                    $(".modal-body").append(newP, newImg)
+                ;
+                for (var i = 0; i<data.length; i++){
+                    var sum = 0
+                    milkDiff = Math.abs(answers.milk - data[i].milk);
+                    teaDiff = Math.abs(answers.tea - data[i].tea);
+                    cheeseDiff = Math.abs(answers.cheese - data[i].cheese);
+                    sweetDiff = Math.abs(answers.sweet - data[i].sweet);
+                    fruitDiff = Math.abs(answers.fruit - data[i].fruit);
+                    toppingDiff = Math.abs(answers.topping - data[i].topping)
                 }
+
+
+
+
+
+
+
             })
 
         })

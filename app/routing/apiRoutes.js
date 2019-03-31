@@ -1,8 +1,6 @@
-function postRequest(app,path) {
+function postRequest(drinks,app,path) {
     app.post("/api/survey", function (req, res) {
-        var surveyAnswer = req.body;
-        // answer.push(surveyAnswer)
-        res.json(surveyAnswer)
+        res.json(drinks)
         
     })
 }
