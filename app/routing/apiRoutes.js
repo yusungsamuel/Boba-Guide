@@ -5,4 +5,13 @@ function postRequest(drinks,app,path) {
     })
 }
 
-module.exports = postRequest
+function apiGetRequest (app, drinks) {
+    app.get("/api/bobalist", function(req, res){
+        return res.json(drinks)
+    })
+    }
+
+module.exports = {
+    postRequest: postRequest,
+    apiGetRequest: apiGetRequest
+}

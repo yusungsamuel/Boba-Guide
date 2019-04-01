@@ -16,8 +16,10 @@ getRequest(app, path)
 var drinks = require("./app/data/boba.js")
 
 
-var postRequest = require("./app/routing/apiRoutes.js")
-postRequest(drinks, app, path)
+var apiRoutes = require("./app/routing/apiRoutes.js")
+apiRoutes.postRequest(drinks, app, path)
+
+apiRoutes.apiGetRequest(app, drinks)
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
