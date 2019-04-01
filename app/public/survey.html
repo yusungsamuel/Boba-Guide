@@ -186,7 +186,10 @@
                 var targetIndex = differenceArr.indexOf(Math.min(...differenceArr))
                 console.log(Math.min(...differenceArr))
                 var newDiv = $("<div>").text("We think you should try " + data[targetIndex].name + ".")
-                $(".modal-body").append(newDiv)
+                newDiv.addClass("text")
+                var newImg = $("<img>").attr("src", data[targetIndex].image)
+                newImg.addClass("image")
+                $(".modal-body").append(newDiv, newImg)
             })
 
         })
