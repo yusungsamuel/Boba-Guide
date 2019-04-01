@@ -156,6 +156,9 @@
     <script>
         $("#submit").on("click", function (event) {
             event.preventDefault();
+
+            $(".modal-body").empty();
+
             var answers = {
                 milk: parseInt($("#q1").val()),
                 tea: parseInt($("#q2").val()),
@@ -168,23 +171,22 @@
             console.log(answers)
 
             $.post("/api/survey", answers).then(function (data) {
-                ;
+                var differenceArr = [];
                 for (var i = 0; i<data.length; i++){
                     var sum = 0
-                    milkDiff = Math.abs(answers.milk - data[i].milk);
-                    teaDiff = Math.abs(answers.tea - data[i].tea);
-                    cheeseDiff = Math.abs(answers.cheese - data[i].cheese);
-                    sweetDiff = Math.abs(answers.sweet - data[i].sweet);
-                    fruitDiff = Math.abs(answers.fruit - data[i].fruit);
-                    toppingDiff = Math.abs(answers.topping - data[i].topping)
+                    sum += Math.abs(answers.milk - data[i].milk);
+                    sum += Math.abs(answers.tea - data[i].tea);
+                    sum += Math.abs(answers.cheese - data[i].cheese);
+                    sum += Math.abs(answers.sweet - data[i].sweet);
+                    sum += Math.abs(answers.fruit - data[i].fruit);
+                    sum += Math.abs(answers.topping - data[i].topping)
+                    differenceArr.push(sum)
                 }
 
-
-
-
-
-
-
+                var targetIndex = differenceArr.indexOf(Math.min(...differenceArr))
+                console.log(Math.min(...differenceArr))
+                var newDiv = $("<div>").text("We think you should try " + data[targetIndex].name + ".")
+                $(".modal-body").append(newDiv)
             })
 
         })
