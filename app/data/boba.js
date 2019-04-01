@@ -1,7 +1,7 @@
 var drinks = [
     {
         name: "Water",
-        image:"http://localhost:3000/assets/image/water.jpg",
+        image:"/assets/image/water.jpg",
         milk: 1,
         tea: 1,
         cheese: 1,
@@ -11,7 +11,7 @@ var drinks = [
     },
     {
         name: "Fresh Fruit Tea",
-        image:"http://localhost:3000/assets/image/freshfruittea.jpg",
+        image:"/assets/image/freshfruittea.jpg",
         milk: 1,
         tea: 5,
         cheese: 1,
@@ -21,7 +21,7 @@ var drinks = [
     },
     {
         name: "Brown Sugar Boba Fresh Milk",
-        image:"http://localhost:3000/assets/image/brownsugarfreshmilk.jpg",
+        image:"/assets/image/brownsugarfreshmilk.jpg",
         milk: 5,
         tea: 1,
         cheese: 1,
@@ -31,7 +31,7 @@ var drinks = [
     },
     {
         name: "Hokkaido Milktea",
-        image:"http://localhost:3000/assets/image/hokkaidomt.png",
+        image:"/assets/image/hokkaidomt.png",
         milk: 3,
         tea: 3,
         cheese: 1,
@@ -41,7 +41,7 @@ var drinks = [
     },
     {
         name: "Mango Sago",
-        image:"http://localhost:3000/assets/image/mangosago.jpg",
+        image:"/assets/image/mangosago.jpg",
         milk: 1,
         tea: 1,
         cheese: 1,
@@ -51,7 +51,7 @@ var drinks = [
     },
     {
         name: "Oolong Creme With Boba",
-        image:"http://localhost:3000/assets/image/oolongcrema.png",
+        image:"/assets/image/oolongcrema.png",
         milk: 1,
         tea: 5,
         cheese: 1,
@@ -61,7 +61,7 @@ var drinks = [
     },
     {
         name: "Mango Cheese Tea",
-        image:"http://localhost:3000/assets/image/mangocheesetea.jpeg",
+        image:"/assets/image/mangocheesetea.jpeg",
         milk: 3,
         tea: 5,
         cheese: 5,
@@ -71,7 +71,7 @@ var drinks = [
     },
     {
         name: "Black Milktea With Grass Jelly",
-        image:"http://localhost:3000/assets/image/grassjellymt.jpg",
+        image:"/assets/image/grassjellymt.jpg",
         milk: 4,
         tea: 4,
         cheese: 1,
@@ -81,7 +81,7 @@ var drinks = [
     },
     {
         name: "Lychee Green Tea with Lychee Jelly",
-        image:"http://localhost:3000/assets/image/lycheegt.png",
+        image:"/assets/image/lycheegt.png",
         milk: 1,
         tea: 5,
         cheese: 1,
@@ -91,7 +91,7 @@ var drinks = [
     },
     {
         name: "Caramel Milktea With Pudding",
-        image:"http://localhost:3000/assets/image/caramelmt.jpg",
+        image:"/assets/image/caramelmt.jpg",
         milk: 4,
         tea: 3,
         cheese: 1,
