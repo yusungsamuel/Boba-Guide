@@ -5,6 +5,11 @@ body {
     /* background-repeat: no-repeat  */
 }
 
+#logo {
+    width: 125px;
+    transform: rotate(-30deg)
+}
+
 .text {
     font-family: 'Alegreya', serif;
 

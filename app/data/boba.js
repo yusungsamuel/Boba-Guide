@@ -99,6 +99,16 @@ var drinks = [
         fruit: 1,
         topping: 1
     },
+    {
+        name: "Matcha Red Bean Chesse",
+        image:"/assets/image/matchachesse.jpg",
+        milk: 4,
+        tea: 4,
+        cheese: 5,
+        sweet: 3,
+        fruit: 1,
+        topping: 3
+    }
 
 ];
 
